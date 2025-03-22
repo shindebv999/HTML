@@ -1,0 +1,544 @@
+**HTML Introduction
+HTML is the Hypertext Markup Language that uses markups (tags) as the building blocks of a web page.
+HTML tags (</>) define the basic structure of a web page but they are not visible on the web page.
+HTML5 is the latest version of HTML.
+                            ********************************************
+1)Who is the creator of HTML?
+Tim Berners-Lee invented World Wide Web.
+..................................................................................................
+
+2)Why do I need to learn HTML?
+If you want to start your career in web development, HTML is the startup language to get started.
+........................................................................................................
+3)What are the prerequisites to learn HTML?
+You just need to know the English language to start learning HTML.
+The structure of a web page resembles a human structure. Like a human body the web page also has two parts i.e. head and body.
+...................................................................................................
+
+                              ***********************************
+**HTML Syntax
+HTML uses markups to build structure. It consists of tags, elements, and attributes. Every tag may have one or more attributes.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>title of page</title>
+</head>
+<body>
+
+  <h1>Heading of the page</h1>
+  <p>This is a simple paragraph.</p>
+
+</body>
+</html>
+ .............................................................................................................
+
+                           ******************************************
+
+**Terms and Definitions
+Tag
+Tags are special characters written within the angle brackets(<tag-name >). For instance <p>, <h1>, etc.
+...........................................................................................................
+Element
+An element consists of opening tag, closing tag and the content between them.
+Example:
+
+<p>this is paragraph</p>
+*<p> :--opening tag 
+*</p>:--closing tag 
+*content:-- this is paragraph
+inside<p></p>both we write this is known as content
+element:--opening tag ,closing tag &content is known as content
+...............................................................................................................
+Attribute
+An attribute makes an element more useable. It consists of name-value pair.
+...............................................................................................................
+
+                        ***********************************************
+
+Tags and Definitions
+.............................................................................................................
+<html>
+
+This is a root element. This tag describes that the code written inside these is actually HTML.
+.............................................................................................................
+<head>
+
+Head tag contains the data that other machines read to analyze the page.
+.............................................................................................................
+<title>
+
+Title tag specifies the title for the page. This title is visible in the tab bar.
+.............................................................................................................
+<body>
+
+What we write in the body tag appears on the web page.
+.............................................................................................................
+<p>
+
+This tag is used to write a paragraph.
+.............................................................................................................
+
+                        ***********************************************
+
+HTML Elements
+
+An element usually consists of an opening tag, closing tag and the content between them.
+
+<opening_tag> Here content is present </closing_tag>
+<p> Here content is present </p>
+................................................................................................................
+Types of elements
+
+1. Element (opening-closing tags)
+The opening tag consists of less than sign(<), tag name and greater than sign(>). For example, (<p>).
+
+The closing tag consists of less than sign(<), forward slash(/), tag name and greater than sign(>). For example, (</p>).
+	Example:---
+
+<h1>This is the most important Heading.</h1>
+<p>This is a paragraph for test.</p>
+..................................................................................................................
+2. Element (self-closing tag)
+The self-closing tag consists of less than sign (<), element-name, greater than sign with an optional forward slash (/>). For example, (<br/>).
+
+Example:---
+
+<br /> element has space between 'br' and forward slash (/).
+<br/> element has not space between 'br' and forward slash(/).
+<br> has not forward slash(/).
+..................................................................................................................
+*You may add or remove forward slash(/) in the self-closing tag. That does not matter.
+
+*You may have space between the element name and forward slash.For example, both <br /> and <br/> are correct.
+
+*It is the list of self-closing tag. p, area, base, br, col, embed, hr, img, input, keygen, link, meta, param, source, wbr.
+..................................................................................................................
+
+HTML Attributes
+HTML attributes make the HTML elements more usable. An attribute consists of the name-value pair. The attributes must be added to the opening tag.
+
+<p attribute-name="attribute-value"> some text </p>
+<p title="This is a paragraph"> some text </p>
+..................................................................................................................
+
+                      *****************************************************
+
+HTML Headings
+h1 to h6 tags are used to define different types of headings (<h1> to </h6>).
+There are six types of headings from h1 to h6.
+The most important heading is h1. It means it has big font-size.
+The importance of heading decreases from h1 to h6.
+h6 defines least important heading. It means it has small font-size.
+h1>This is the most important Heading.</h1>
+<h2>This is the least important than Heading1</h2>
+<h3>This is the least important than Heading2</h3>
+<h4>This Heading has ranking 4.</h4>
+<h5>This Heading has ranking 5.</h5>
+<h6>This Heading has ranking 6.</h6>
+..................................................................................................................
+
+                       **************************************************
+Why are Headings so important?
+h1 represents explicitly the title of a page. The heading1 (<h1>) is the most important heading.
+Headings may also be used in other elements. In <section> element, we write these headings to explain different topics in a page.
+
+Example:--
+<section>
+ <h1>website</h1>
+ <p>Here, the description about the website should be written such as it is a combination of webpages.</p>
+ </section>
+ .................................................................................................................
+
+                   **************************************************
+HTML Images
+HTML img element adds an image in a page. Firstly we write an image tag. Then, we add the src attribute in the <img> tag.
+
+Syntax to add an image.
+
+Example
+<img src="files/logo.png"  alt="codingb-logo" width="300"/>
+..............................................................................................................
+Image Related Attributes
+src attribute
+src attribute specifies the location (address) of the image.
+Example
+<img src="files/logo.png" alt="codingb logo is present here."/>
+..............................................................................................................
+alt attribute
+alt attribute is used to give the alternate name to an image in the form of text.
+Example
+<img src="files/logo.png" alt="codingb logo is present here."/>
+..............................................................................................................
+height attribute
+height attribute represents the vertical dimension.
+Example
+<img src="files/web.png" height="400px">
+..............................................................................................................
+height attribute
+height attribute represents the vertical dimension.
+Example
+<img src="files/web.png" height="400px">
+..............................................................................................................
+NOTE: align attribute was used to align the image in the text but now it is obsolete. align attribute is not included in HTML5.
+..............................................................................................................
+Tip: Always remember there is no end tag for <Img>. Therefore, only one tag is used. You can also use <img /> tag.
+..............................................................................................................
+
+                          **************************************************************
+
+   HTML links
+HTML links connect the current page to the destination resources. These resources may be the other pages of the same website or the external web resources. These links form navigation bar to navigate the other pages.
+
+href (hyper reference) attribute contains the address of external resources.
+
+<a> element
+a element defines a link that connects the current page with the other pages of the site. a means anchor between two resources.
+.................................................................................................
+text link
+We can make text links by using the text as the content of a tag.
+
+Example
+<a href="https://www.web4college.com/" title="web4college"> Go to web4college </a>
+.................................................................................................
+image link
+We can also make image links by using the image as the content of a tag.
+
+Example
+<a href="https://www.web4college.com/" title="web4college"> <img src="files/logo.png" /> </a>
+...................................................................................................
+<link> element
+link element links the current page to the other documents. link element should be placed in the <head> tag.
+
+Example
+<head>
+ <link rel="stylesheet" href="files/test.css">
+</head> 
+.........................................................................................................
+
+          ****************************************************************************************
+
+ HTML Lists
+Lists are used to write the instructions with a manner, the terms or the definitions of terms. There are three types of lists.
+
+Example
+1.Ordered lists
+2.Mix both solutions
+3.Stir them well.
+4.Add a few drops of the sulphuric acid.
+5.Heat it up to 20 minutes at 88 Celsius temperature.
+
+Unordered lists
+1.Sulphuric Acid
+2.Temperature
+3.Solution1
+4.Solution2
+
+Definition lists
+1.String
+	The string is the group of characters in the double quotation marks.
+2.Operators
+	The operators perform operations on operands and do calculations.         
+
+.........................................................................................................
+                                     ***************************
+1. Ordered list
+we make ordered lists where the order is necessary for the items or instructions. When we give instructions in an ordered manner then we use ordered list.
+
+We take the same example of the recipe to make a difference between ordered and unorodered lists. For example, we are given instructions in an ordered manner to make a recipe.
+
+Example
+<p>Directions to make a recipe(with order)</p>
+<ol>
+ <li>Place all ingredients except the kitchen in the crock pot.</li>
+ <li>stir until mixed.</li>
+ <li>add the chicken and coat well with the sauce.</li>
+</ol>
+
+ol stands for ordered list. li stands for list item.
+By default, ordered lists are marked with the decimal numbers.
+..........................................................................................................
+Ordered list Attributes
+
+reversed Attribute
+reversed attribute reverses the numbering for the list items.
+
+Example
+Directions to make a recipe(with order)
+
+4.Place all ingredients except the kitchen in the crock pot.
+3.stir until mixed.
+2.add the chicken and coat well with the sauce.
+1.cover and cook on higher for 2-3 hours or on low for 7-8 hours.
+
+.......................................................................................................
+
+start Attribute
+start attribute gives a starting numbering value to the ordered list.
+
+Example
+Directions to make a recipie(with order)
+
+45.place all ingredients except the kitchen in the crock pot.
+46.stir until mixed.
+47.add the chicken and coat well with the sauce.
+48.cover and cook on higher for 2-3 hours or on low for 7-8 hours.
+......................................................................................................
+type Attribute
+type attribute defines the type of list item markers.
+
+Example
+Directions to make a recipie(with order)
+
+A.place all ingredients except the kitchen in the crock pot.
+B.stir until mixed.
+C.add the chicken and coat well with the sauce.
+D.cover and cook on higher for 2-3 hours or on low for 7-8 hours.
+.......................................................................................................
+                          ***********************************
+
+2. Unordered list
+We use unordered lists where the order of items is not necessary. For example, ingredients can be written in an unordered manner.
+
+Example
+<ul>
+ <li>Plain Dad's Chicken Breast</li>
+ <li>1 cup canned tomato sauce</li>
+ <li>half cup ketchup</li>
+</ul>	
+ul stands for unordered list. li stands for list item.
+By default, unordered lists are marked with the bullets.
+........................................................................................................
+3. Definition lists
+When we define the terms, then we use definition lists. Here is a simple example
+
+Example
+<dl>
+ <dt>Google</dt>
+ <dd>It is a software that indexes the pages and brings those pages in search results to provide the information to the users.</dd>
+ <dt>Website</dt>
+ <dd>It is a combination of web pages that provide the information.</dd>
+</dl>
+dl stands for description list. dt is for description term. dd stands for description definition.
+It is mostly used for name-value, question-answer pairs.
+......................................................................................................
+Nested lists
+We can make lists of the list. We can make a combination of ordered list and unordered lists.
+
+Example
+Nested Lists
+1.Instruction 1
+2.Instruction 2
+3.Instruction 3
+	1.item 1
+	2.item 2
+	3.item 3
+4.Instruction 3
+.........................................................................................................
+                                 **************************************************************
+
+HTML Tables
+HTML table represents data in the form of rows and columns of a table (i.e. in 2-D form). We use the tables to organize the data in a manner.
+
+table
+It defines a table to organize the data in 2-D form. It contains the basic unit cells called data cells.
+
+Example
+<table>
+ <tr>
+  <td>Name</td> <td>Salary</td>
+ </tr>
+</table>
+.......................................................................................................
+border="1" attribute sets the border of table, td and tr elements. The border may also be specified by CSS properties.
+.......................................................................................................
+tr
+This tag represents the table row that contains one or more data cells. It may also be called as the cells container.
+
+<table>
+ <tr> 
+  <td>data container</td> <td>data container</td>
+ </tr>
+</table>
+........................................................................................................
+td
+This tag represents a discrete cell in a table row. td stands for table data i.e. a cell that contains the data.
+
+<tr>
+  <td>Name</td>
+</tr>
+.......................................................................................................
+th
+It is the same as table data (td) but the content inside this cell is bold and is centered automatically. It is used for heading purposes in a table.
+
+Example
+<tr>
+  <th>Name</th>
+  <th>Salary</th>
+</tr>
+.......................................................................................................
+Span attributes
+
+rowspan attribute
+rowspan attribute allows a single cell to contain more than one rows. In other words, two cells of two rows are merged to form one cell.
+
+See the example below.
+
+Example
+<tr>
+  <td rowspan="2">Name</td>
+  <td>way1</td>
+  <td>way2</td>
+</tr>
+
+
+The integer value (1,2,3,4,5....) defines the number of rows to span. In the above example, a cell contains or spans two rows because the value of rowspan attribute is 2
+.....................................................................................................
+colspan attribute
+colspan attribute allows a cell to contain more than columns. Two cells are merged to contain one column.
+
+See the example below.
+
+Example
+<tr>
+  <td>Name</td>
+  <td colspan="2">Telephone</td>
+</tr>
+
+The integer value represents the number of columns to span. In the above example, a single cell spans two cells.
+
+thead, tbody and tfoot may also be used to build a table. thead element contains the table headings. tbody element contains the table data. tfoot element contains the summary of the data.
+.........................................................................................................
+Stylish table
+We use CSS properties to design the table.
+
+border:1px;
+Border may also be specified by border property.
+
+...................................................................................................
+             ****************************************************************
+
+ HTML Formatting
+HTML formatting includes many elements which give different styles to the text. These elements can format a simple text in different styles.
+
+For example, we can make bold text by <b>, make the text italic by <i>. In addition to this, we will use different kinds of tags for different purposes.
+...............................................................................................................................
+Italic text
+i tag is used to give an italic style to a piece of text. The text will no longer be straight.
+This paragraph is without any formatting.
+<i>This paragraph has been given italic style. </i>                     
+
+...............................................................................................................................
+Bold text
+b tag is used to represent bold text with respect to its surrounding text. It is an inline element.
+
+Example
+This text is not bold.
+
+The letter heading was highlighted.
+...............................................................................................................................
+
+Underlined text
+u element is used to underline text with respect to its surrounding text. It is an inline element.
+
+Example
+This paragraph is simple.
+
+The underlined text represents the spelling mistakes.
+...............................................................................................................................
+
+Emphasized text
+em tag is used to emphasize text. It gives emphatic stress to the text.
+
+Example
+This paragraph is simple without any formatting.
+
+This paragraph is emphasized using em element.
+
+This element resembles the italic element in style. But the position of em element in a sentence changes the meaning of the sentence.
+
+They are different with respect to their use but are same with respect to style.
+...............................................................................................................................
+strong element
+strong element is used to aware someone about the warning (seriousness), note (importance) or tip.
+
+Example
+NOTE: The strong element should be used to represent seriousness, urgency in the text.
+
+NOTE: The strong element should be used to represent seriousness, urgency in the text.
+...............................................................................................................................
+mark element
+mark tag is used to mark a piece of text. By default the background color of the marked text is yellow.
+
+Example
+This paragraph has not been marked.
+
+This paragraph is marked.
+...............................................................................................................................
+small element
+small represents the small font-size of text.
+
+Example
+Overuse of that thing will cause disaster.
+Overuse of that thing will cause disaster.
+
+The small element is commonly used for side comments, copyright information or important text.
+
+Note:big element is not included in HTML5. Now CSS properties should be used to change the font-size.
+...............................................................................................................................
+del element
+del element defines the deleted text.
+
+Example
+The text was not deleted.
+The text was deleted.
+...............................................................................................................................
+
+insert element:
+ins element is used to represent the addition of text.
+
+Example
+Here the text is already present.
+Here the new text has been entered.
+
+...............................................................................................................................
+sub element
+sub element defines the subscript in an equation. This element is used to make a subscript. It default font-size is small.
+
+Example
+vf = vi+at
+
+vf= vi+at
+
+...............................................................................................................................
+sup element
+sup element defines the superscript in an equation.
+
+See the example below.
+
+Example
+52=25
+
+a2=b2+c2
+
+...............................................................................................................................
+span element
+span element is used to style a piece of text. It is used to make annotations.
+
+Example
+Here annotations are made using CSS properties.
+
+...............................................................................................................................
+Var element:
+var element is used to write variables in an expression. For example, S=at2
+
+Here “S” is distance. “a” is acceleration and “t” is time. And these are variables.
+
+Example
+Equation of distance is s = vt
+
+Equation of distance is S = vt
+
+...............................................................................................................................
+
+HTML Codes:---

@@ -1,0 +1,214 @@
+
+<form id="reg_form" action="get">
+		
+	<label class="required">First Name:</label><br/>
+	<input type="text" id="firstname" placeholder="Enter Your First Name" onblur="validateName()" ><br/>
+	<span id="firstnameError"  style="color:red"></span><br/>
+
+	<label class="required">Email Id:</label><br/>
+	<input type="Email" id="email" placeholder="abc@gmail.com " onblur="validateemail()"><br/>
+	<span id="emailError" style="color:red"></span><br/>
+
+	<label class="required">Password:</label><br/>
+	<input type="Password" id="password" placeholder=" Enter Your Password" onblur="validatepassword()"><br/>
+	<span id="passwordError" style="color:red"></span><br/>
+
+	<label class="required">Confirm Password:</label><br/>
+	<input type="password" id="cpassword"  placeholder=" Enter Your password again" onblur="validatecpassword()"><br/>
+	<span id="cpasswordError" style="color:red"></span><br/>
+
+
+	<label>Address:</label><br/>
+	<textarea id="textarea" rows="10" cols="40"></textarea><br/>
+	<span id="textareaError" style="color:red"></span><br/>
+	<input  type="submit" id="btn" value="Submit" >
+
+</form> 
+
+<script type="text/javascript">
+
+    var form=document.getElementById('reg_form');
+    form.addEventListener("submit",function(event){
+        event.preventDefault();
+        validateForm();
+    });
+
+
+    function validateName() {
+    name=document.getElementById('firstname').value.trim();
+    error=document.getElementById('firstnameError');
+    if(name===''){
+        error.innerText="name can't empty";
+        return false;
+    }
+    else{
+        error.innerText='';
+        return true;
+    }
+    }
+
+    function validateemail() {
+    email=document.getElementById('email').value.trim();
+    error=document.getElementById('emailError');
+    if(email===''){
+        error.innerText="email can't empty";
+        return false;
+    }
+    else{
+        error.innerText='';
+        return true;
+    }
+    }
+
+    function validatepassword() {
+    password=document.getElementById('password').value.trim();
+    error=document.getElementById('passwordError');
+    if(password===''){
+        error.innerText="password can't empty";
+        return false;
+    }
+    else{
+        error.innerText='';
+        return true;
+    }
+    }
+
+    function validatecpassword() {
+    cpassword=document.getElementById('cpassword').value.trim();
+    error=document.getElementById('cpasswordError');
+    if(cpassword===''){
+        error.innerText="cpassword can't empty";
+        return false;
+    }else if(cpassword!==password){
+        error.innerText="cpassword not match";
+        return false;
+    }
+    else{
+        error.innerText='';
+        return true;
+    }
+    }
+
+   function validateForm(){
+    let isvalidateName= validateName();
+    let isvalidateemail= validateemail();
+    let isvalidatepassword= validatepassword();
+    let isvalidatecpassword= validatecpassword();
+    
+    if(isvalidateName&& isvalidateemail&& isvalidatepassword && isvalidatecpassword){
+     alert(" form submited successfully !");
+       name=document.getElementById('firstname').value.trim();
+         email=document.getElementById('email').value.trim();
+          password=document.getElementById('password').value.trim();
+           cpassword=document.getElementById('cpassword').value.trim();
+            address=document.getElementById('textarea').value.trim();
+         
+         console.log(name , email  ,password  ,cpassword  , address);
+           document.getElementById('reg_form').submit();
+
+   }
+}
+
+	/*
+	var form=document.getElementById("reg_form");
+	form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    validateForm();
+
+});
+
+function validateName() {
+    let name = document.getElementById("firstname").value.trim();
+    let error = document.getElementById("firstnameError");
+
+    if (name === "") {
+        error.innerText = "First Name cannot be empty!";
+        return false;
+    } else {
+        error.innerText = "";
+        return true;
+    }
+}
+
+function validateemail() {
+    let email = document.getElementById("email").value.trim();
+    let error = document.getElementById("emailError");
+   // let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === "") {
+        error.innerText = "Email cannot be empty!";
+        return false;
+    }else {
+        error.innerText = "";
+        return true;
+    }
+}
+
+function validatepassword() {
+    let password = document.getElementById("password").value.trim();
+    let error = document.getElementById("passwordError");
+
+    if (password === "") {
+        error.innerText = "Password cannot be empty!";
+        return false;
+    } else {
+        error.innerText = "";
+        return true;
+    }
+}
+
+function validatecpassword() {
+    let password = document.getElementById("password").value.trim();
+    let confirmPassword = document.getElementById("cpassword").value.trim();
+   let error = document.getElementById("cpasswordError");
+
+    if (confirmPassword === "") {
+        error.innerText = "Confirm Password cannot be empty!";
+        return false;
+    } else if (confirmPassword !== password) {
+        error.innerText = "Passwords do not match!";
+        return false;
+    } else {
+        error.innerText = "";
+        return true;
+    }
+}
+
+
+function validateForm() {
+    let isValidName = validateName();
+    let isValidEmail = validateemail();
+    let isValidPassword = validatepassword();
+    let isValidCPassword = validatecpassword();
+    
+
+
+
+    if (isValidName && isValidEmail && isValidPassword && isValidCPassword) {
+        alert("Form Submitted Successfully!");
+
+         let name = document.getElementById("firstname").value.trim();
+         let email = document.getElementById("email").value.trim();
+         let password = document.getElementById("password").value.trim();
+         let cpassword = document.getElementById("cpassword").value.trim();
+         let textarea = document.getElementById("textarea").value.trim();
+
+           console.log("Form Submitted Successfully!");
+        console.log("First Name: " + name);
+        console.log("Email: " + email);
+        console.log("Password: " + password);
+        console.log("Address: " + textarea);
+
+        document.getElementById("reg_form").submit();
+
+
+       
+    }
+}*/
+
+</script>
+
+
+
+
+

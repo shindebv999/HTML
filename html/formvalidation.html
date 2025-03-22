@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form id="form_reg">
+		username:<input type="text" id="username" name="username"  onblur="validateUserName()"><br/>
+		<span id="usernameError" style="color: red;"></span><br/>
+
+		password:<input type="password" id="password" name="password" onblur="validatePassword()"><br/>
+		<span id="passwordError" style="color: red;"></span><br/>
+
+		confpassword:<input type="password" id="confpassword" name="confpassword" onblur="validateConfPassword()"><br/>
+		<span id="confpasswordError" style="color: red;"></span><br/>
+
+		<input type="submit" name="Reg">
+	</form>
+	<script type="text/javascript">
+		var form=document.getElementById('form_reg');
+		form.addEventListener("submit",function(event){
+			event.preventDefault();
+			validateForm();
+		});
+		function validateUserName(){
+			name=document.getElementById('username').value.trim();
+			error=document.getElementById('usernameError');
+			if(name===''){
+				error.innerText="plase fill username";
+				return false;
+			}else{
+				error.innerText="";
+				return true;
+			}}
+			function validatePassword(){
+			password=document.getElementById('password').value.trim();
+			error=document.getElementById('passwordError');
+			if(password===''){
+				error.innerText="plase fill password";
+				return false;
+			}else{
+				error.innerText="";
+				return true;
+			}}
+			function validateConfPassword(){
+			confpassword=document.getElementById('confpassword').value.trim();
+			error=document.getElementById('confpasswordError');
+			if(confpassword===''){
+				error.innerText="plase fill confpassword";
+				return false;
+			}else if(password!==confpassword){
+				error.innerText="plase fill password not match";
+				return false;
+			}else{
+				error.innerText="";
+				return true;
+			}
+}
+			function validateForm(){
+				let isValidateUsename=validateUserName();
+				let isValidatePassword=validatePassword();
+				let isValidateConfPassword=validateConfPassword();
+
+				if(isValidateUsename&& isValidatePassword&& isValidateConfPassword){
+					alert("submit sucessfully ...");
+					username=document.getElementById('username').value.trim();
+					password=document.getElementById('password').value.trim();
+					confpassword=document.getElementById('confpassword').value.trim();
+
+
+					console.log(username   , password    ,confpassword);
+
+					document.getElementById("form_reg").submit();
+				}
+			}
+		
+
+
+	</script>
+
+</body>
+</html>
